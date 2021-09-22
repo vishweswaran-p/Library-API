@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "764a3e35-d666-4937-bc7a-55bb42251bb2",
+		"name": "Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"book_name\":\"Path to success\",\n    \"published_date\":\"2019-09-15\",\n    \"author_name\":\"John mathews\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				},
+				"description": "To create a book record."
+			},
+			"response": []
+		},
+		{
+			"name": "Update book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"3"
+					]
+				},
+				"description": "To update book information"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book/5c17c3d0-1aef-11ec-8e4e-436730ca8838",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"5c17c3d0-1aef-11ec-8e4e-436730ca8838"
+					]
+				},
+				"description": "To delete a book"
+			},
+			"response": []
+		},
+		{
+			"name": "Get books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				},
+				"description": "To get list of books"
+			},
+			"response": []
+		},
+		{
+			"name": "Get aggregated count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v1/book/count/PUBLISHED_DATE/2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"count",
+						"PUBLISHED_DATE",
+						"2018"
+					]
+				},
+				"description": "To get aggregated count based on given key value."
+			},
+			"response": []
+		}
+	]
+}
